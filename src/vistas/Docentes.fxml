@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="434.0" prefWidth="765.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication27.DocentesController">
+   <children>
+      <Button fx:id="btnCrearDocente" layoutX="254.0" layoutY="353.0" mnemonicParsing="false" onAction="#crearDocente" text="Crear Docente" />
+      <VBox layoutX="31.0" layoutY="82.0" prefHeight="47.0" prefWidth="161.0">
+         <children>
+            <Label fx:id="lbNombreDocente" text="Nombre Docente" />
+            <TextField fx:id="txfNonmbre" />
+         </children>
+      </VBox>
+      <VBox layoutX="31.0" layoutY="129.0" prefHeight="47.0" prefWidth="161.0">
+         <children>
+            <Label fx:id="lbApellidoDocente" text="Apellido docente" />
+            <TextField fx:id="txfApellido" />
+         </children>
+      </VBox>
+      <VBox layoutX="31.0" layoutY="35.0" prefHeight="47.0" prefWidth="161.0">
+         <children>
+            <Label fx:id="lbID" text="ID Docente" />
+            <TextField fx:id="txfID" prefHeight="25.0" prefWidth="77.0" />
+         </children>
+      </VBox>
+      <VBox layoutX="31.0" layoutY="177.0" prefHeight="47.0" prefWidth="161.0">
+         <children>
+            <Label fx:id="lbDNIDocente" text="DNI Docente" />
+            <TextField fx:id="txfDNI" />
+         </children>
+      </VBox>
+      <VBox layoutX="31.0" layoutY="224.0" prefHeight="47.0" prefWidth="161.0">
+         <children>
+            <Label fx:id="lbFechaNacimiento" text="Fecha de nacimiento Docente" />
+            <TextField fx:id="txfFechaNac" />
+         </children>
+      </VBox>
+      <VBox layoutX="31.0" layoutY="271.0" prefHeight="47.0" prefWidth="157.0">
+         <children>
+            <Label fx:id="lbDireccion" text="Direccion Docente" />
+            <TextField fx:id="txfDireccion" prefHeight="25.0" prefWidth="109.0" />
+         </children>
+      </VBox>
+      <VBox layoutX="31.0" layoutY="318.0" prefHeight="47.0" prefWidth="157.0">
+         <children>
+            <Label fx:id="lbLegajo" text="Legajo de Docente" />
+            <TextField fx:id="txfLegajo" />
+         </children>
+      </VBox>
+      <TableView fx:id="tbDocentes" layoutX="199.0" layoutY="59.0" prefHeight="289.0" prefWidth="524.0">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="colNom" prefWidth="75.0" text="Nombre" />
+            <TableColumn fx:id="colApellido" prefWidth="75.0" text="Apellido" />
+            <TableColumn fx:id="colDNI" prefWidth="75.0" text="DNI" />
+            <TableColumn fx:id="colFechaNac" prefWidth="75.0" text="FechaNac" />
+            <TableColumn fx:id="colDireccion" prefWidth="75.0" text="Direccion" />
+            <TableColumn fx:id="colLegajo" prefWidth="75.0" text="Legajo" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnVerDocentes" layoutX="383.0" layoutY="353.0" mnemonicParsing="false" onAction="#verDocentes" prefHeight="25.0" prefWidth="92.0" text="Docentes" />
+      <Button fx:id="btnEliminarDocente" layoutX="494.0" layoutY="353.0" mnemonicParsing="false" onAction="#eliminarDocente" prefHeight="25.0" prefWidth="91.0" text="Eliminar" />
+      <TextField fx:id="txtEliminar" layoutX="24.0" layoutY="395.0" prefHeight="25.0" prefWidth="60.0" />
+      <Label fx:id="lbEliminar" layoutX="31.0" layoutY="370.0" text="Eliminar Docente" />
+      <Button fx:id="btnModificar" layoutX="600.0" layoutY="353.0" mnemonicParsing="false" onAction="#modificarDocente" prefHeight="25.0" prefWidth="90.0" text="Modificar" />
+   </children>
+</AnchorPane>
