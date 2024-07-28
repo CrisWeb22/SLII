@@ -1,39 +1,64 @@
 
 package javafxapplication27;
 
+import java.time.LocalDate;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
+@Table(name = "DOCENTE")
 public class Docente {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "IDDOCENTE")
     private int IdDocente;
+    @Column(name = "NOMBREDOCENTE")
     private String nombreDocente;
+    @Column(name = "APELLIDODOCENTE")
     private String apellidoDocente;
+    @Column(name = "DNIDOCENTE")
     private int dniDocente;
-    private String fechaNacimientoDocente;
+    @Column(name = "fechanacimientodocente")
+    private LocalDate fechaNacimientoDocente;
+    @Column(name = "DIRECCIONDOCENTE")
     private String direccionDocente;
+    @Column(name = "LEGAJODOCENTE")
     private int legajoDocente;
+    @ManyToOne
+    private Instituto instituto;
 
     public Docente() {
     }
 
-    public Docente(int IdDocente, String nombreDocente, String apellidoDocente, int dniDocente, String fechaNacimientoDocente, String direccionDocente, int legajoDocente) {
-        this.IdDocente = IdDocente;
+    public Docente(String nombreDocente, String apellidoDocente, int dniDocente, LocalDate fechaNacimientoDocente, String direccionDocente, int legajoDocente, Instituto instituto) {
         this.nombreDocente = nombreDocente;
         this.apellidoDocente = apellidoDocente;
         this.dniDocente = dniDocente;
         this.fechaNacimientoDocente = fechaNacimientoDocente;
         this.direccionDocente = direccionDocente;
         this.legajoDocente = legajoDocente;
+        this.instituto = instituto;
+    }
+
+    
+
+    public Instituto getInstituto() {
+        return instituto;
+    }
+
+    public void setInstituto(Instituto instituto) {
+        this.instituto = instituto;
     }
 
     public int getIdDocente() {
         return IdDocente;
-    }
-
-    public void setIdDocente(int IdDocente) {
-        this.IdDocente = IdDocente;
     }
 
     public String getNombreDocente() {
@@ -60,11 +85,11 @@ public class Docente {
         this.dniDocente = dniDocente;
     }
 
-    public String getFechaNacimientoDocente() {
+    public LocalDate getFechaNacimientoDocente() {
         return fechaNacimientoDocente;
     }
 
-    public void setFechaNacimientoDocente(String fechaNacimientoDocente) {
+    public void setFechaNacimientoDocente(LocalDate fechaNacimientoDocente) {
         this.fechaNacimientoDocente = fechaNacimientoDocente;
     }
 

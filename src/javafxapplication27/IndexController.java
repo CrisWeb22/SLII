@@ -34,6 +34,8 @@ public class IndexController implements Initializable {
     private Label label;
     @FXML
     private Button btnDocente;
+    @FXML
+    private Button btnInstitutos;
     
     
     @Override
@@ -44,6 +46,15 @@ public class IndexController implements Initializable {
     @FXML
     private void IngresoDocente(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/vistas/Docentes.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void ingresarInstitutos(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/vistas/Institutos.fxml"));
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);
